@@ -27,7 +27,7 @@ app.get('/api/health', (req, res) => res.json({ status: 'ok', app: 'DataHub GH' 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     console.log('MongoDB connected');
-    app.listen(process.env.PORT || 5000, () => {
+    app.listen(process.env.PORT || 10000, () => {
       console.log(`Server running on port ${process.env.PORT || 5000}`);
     });
   })
