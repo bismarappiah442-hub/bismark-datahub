@@ -1,0 +1,123 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--gray-50);
+}
+
+.header {
+  background: white;
+  border-bottom: 1px solid var(--gray-200);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.headerInner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoMark {
+  width: 36px;
+  height: 36px;
+  background: var(--green);
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.logoText {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--gray-800);
+}
+
+.walletChip {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--green-light);
+  border: 1px solid var(--green-mid);
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--green-dark);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.walletChip:hover { background: #c5ede0; }
+
+.walletDot {
+  width: 8px;
+  height: 8px;
+  background: var(--green);
+  border-radius: 50%;
+}
+
+.nav {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  gap: 4px;
+  border-top: 1px solid var(--gray-100);
+}
+
+.navBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-400);
+  cursor: pointer;
+  transition: all 0.15s;
+  margin-bottom: -1px;
+}
+
+.navBtn:hover { color: var(--gray-800); }
+
+.navActive {
+  color: var(--green-dark);
+  border-bottom-color: var(--green);
+  font-weight: 600;
+}
+
+.navIcon { font-size: 14px; }
+
+.main {
+  flex: 1;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px 20px;
+}
+
+@media (max-width: 600px) {
+  .headerInner { padding: 12px 16px; }
+  .logoText { display: none; }
+  .navBtn { padding: 10px 12px; font-size: 12px; }
+  .main { padding: 16px; }
+}

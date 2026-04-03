@@ -1,0 +1,44 @@
+.balanceCard {
+  background: var(--green);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  color: white;
+}
+.balanceLabel { font-size: 13px; opacity: 0.8; margin-bottom: 6px; }
+.balance { font-size: 36px; font-weight: 700; margin-bottom: 8px; }
+.balanceSub { font-size: 13px; opacity: 0.75; }
+
+.amountGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+
+@media (max-width: 480px) { .amountGrid { grid-template-columns: repeat(2, 1fr); } }
+
+.amountBtn {
+  border: 1.5px solid var(--gray-200); border-radius: var(--radius-md);
+  padding: 14px 10px; background: white; cursor: pointer;
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+  transition: all 0.15s;
+}
+.amountBtn:hover { border-color: var(--green); background: var(--green-light); }
+.amountBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.amountVal { font-size: 16px; font-weight: 700; color: var(--gray-800); }
+.amountSub { font-size: 11px; color: var(--gray-400); }
+
+.customRow { display: flex; gap: 10px; align-items: stretch; }
+.inputWrap { flex: 1; position: relative; display: flex; align-items: center; }
+.prefix {
+  position: absolute; left: 12px; font-size: 14px; font-weight: 600;
+  color: var(--gray-400); pointer-events: none;
+}
+.customInput {
+  width: 100%; padding: 11px 12px 11px 44px;
+  border: 1px solid var(--gray-200); border-radius: var(--radius-sm);
+  font-size: 14px; font-family: inherit; color: var(--gray-800); background: white;
+}
+.customInput:focus { outline: none; border-color: var(--green); box-shadow: 0 0 0 3px rgba(29,158,117,0.12); }
+
+.infoBox {
+  background: var(--gray-100); border-radius: var(--radius-sm);
+  padding: 14px; margin-top: 1.5rem; font-size: 13px; color: var(--gray-600);
+  line-height: 1.6;
+}
